@@ -1,6 +1,6 @@
 # Soarers-Dongle
 
-Like the description says, this is just a simple dongle adapter for converting an IBM Model M with RJ45 plug to USB. I whiped up the PCB in about an hour, so there might be errors at the moment. Also, please do not plug an ethernet cord into the adapter, it might do weird things (or nothing at all)! 
+Like the description says, this is just a simple dongle adapter for converting an IBM Model M with RJ45 plug to USB. I whiped up the PCB in about an hour, so there might be errors in the PCB design. If there is, file an issue report and I'll fix it right away! Also, please do not plug an ethernet cord into the adapter, it might do weird things (or nothing at all)! 
 
 <br>
 

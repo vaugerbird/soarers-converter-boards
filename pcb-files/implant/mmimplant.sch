@@ -209,6 +209,29 @@
 <wire x1="-3.5" y1="3" x2="-3" y2="3.5" width="0.1" layer="51"/>
 <circle x="-3.875" y="3.25" radius="0.125" width="0.25" layer="25"/>
 </package>
+<package name="SON65P200X200X80-7N">
+<description>&lt;b&gt;DRV0006A&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.05" y="0.65" dx="0.6" dy="0.35" layer="1"/>
+<smd name="2" x="-1.05" y="0" dx="0.6" dy="0.35" layer="1"/>
+<smd name="3" x="-1.05" y="-0.65" dx="0.6" dy="0.35" layer="1"/>
+<smd name="4" x="1.05" y="-0.65" dx="0.6" dy="0.35" layer="1"/>
+<smd name="5" x="1.05" y="0" dx="0.6" dy="0.35" layer="1"/>
+<smd name="6" x="1.05" y="0.65" dx="0.6" dy="0.35" layer="1"/>
+<smd name="7" x="0" y="0" dx="1.7" dy="1.1" layer="1" rot="R90"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-1.6" y1="1.3" x2="1.6" y2="1.3" width="0.05" layer="51"/>
+<wire x1="1.6" y1="1.3" x2="1.6" y2="-1.3" width="0.05" layer="51"/>
+<wire x1="1.6" y1="-1.3" x2="-1.6" y2="-1.3" width="0.05" layer="51"/>
+<wire x1="-1.6" y1="-1.3" x2="-1.6" y2="1.3" width="0.05" layer="51"/>
+<wire x1="-1" y1="1" x2="1" y2="1" width="0.1" layer="51"/>
+<wire x1="1" y1="1" x2="1" y2="-1" width="0.1" layer="51"/>
+<wire x1="1" y1="-1" x2="-1" y2="-1" width="0.1" layer="51"/>
+<wire x1="-1" y1="-1" x2="-1" y2="1" width="0.1" layer="51"/>
+<wire x1="-1" y1="0.5" x2="-0.5" y2="1" width="0.1" layer="51"/>
+<circle x="-1.35" y="1.325" radius="0.125" width="0.25" layer="25"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATMEGA32U4-MU">
@@ -263,6 +286,21 @@
 <pin name="PF7_(ADC7/TDI)" x="48.26" y="27.94" length="middle" rot="R270"/>
 <pin name="GND_3" x="50.8" y="27.94" length="middle" rot="R270"/>
 <pin name="VCC_2" x="53.34" y="27.94" length="middle" rot="R270"/>
+</symbol>
+<symbol name="TPS7A2650DRVR">
+<wire x1="5.08" y1="2.54" x2="20.32" y2="2.54" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-12.7" x2="20.32" y2="2.54" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-12.7" x2="5.08" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-12.7" width="0.254" layer="94"/>
+<text x="21.59" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="21.59" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="OUT" x="0" y="0" length="middle"/>
+<pin name="NC" x="0" y="-2.54" length="middle" direction="nc"/>
+<pin name="PG" x="0" y="-5.08" length="middle"/>
+<pin name="EP" x="12.7" y="-17.78" length="middle" rot="R90"/>
+<pin name="IN" x="25.4" y="0" length="middle" rot="R180"/>
+<pin name="GND" x="25.4" y="-2.54" length="middle" rot="R180"/>
+<pin name="EN" x="25.4" y="-5.08" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -329,6 +367,36 @@ Source: &lt;a href="https://componentsearchengine.com/Datasheets/2/ATMEGA32U4-MU
 <attribute name="MANUFACTURER_PART_NUMBER" value="ATMEGA32U4-MU" constant="no"/>
 <attribute name="MOUSER_PART_NUMBER" value="556-ATMEGA32U4-MU" constant="no"/>
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Microchip-Technology-Atmel/ATMEGA32U4-MU?qs=JV7lzlMm3yJYRpi0cY3cKw%3D%3D" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TPS7A2650DRVR" prefix="IC">
+<description>&lt;b&gt;LDO Voltage Regulators 500-mA 18-V ultra-low-IQ low-dropout (LDO) linear voltage regulator with power good 6-WSON -40 to 125&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="https://www.ti.com/lit/gpn/TPS7A26"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="TPS7A2650DRVR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SON65P200X200X80-7N">
+<connects>
+<connect gate="G$1" pin="EN" pad="4"/>
+<connect gate="G$1" pin="EP" pad="7"/>
+<connect gate="G$1" pin="GND" pad="5"/>
+<connect gate="G$1" pin="IN" pad="6"/>
+<connect gate="G$1" pin="NC" pad="2"/>
+<connect gate="G$1" pin="OUT" pad="1"/>
+<connect gate="G$1" pin="PG" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="LDO Voltage Regulators 500-mA 18-V ultra-low-IQ low-dropout (LDO) linear voltage regulator with power good 6-WSON -40 to 125" constant="no"/>
+<attribute name="HEIGHT" value="0.8mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Texas Instruments" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="TPS7A2650DRVR" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="595-TPS7A2650DRVR" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS7A2650DRVR?qs=OTrKUuiFdkaeaXj%2F%252BB59oA%3D%3D" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -6221,6 +6289,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="JP3" library="adafruit" deviceset="PINHD-1X3" device=""/>
 <part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
+<part name="IC1" library="SamacSys_Parts" deviceset="TPS7A2650DRVR" device=""/>
+<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6273,8 +6343,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="RST" gate="G$1" x="101.6" y="-5.08" smashed="yes" rot="R180">
 <attribute name="TP_SIGNAL_NAME" x="100.33" y="-3.81" size="1.778" layer="97" rot="R180"/>
 </instance>
-<instance part="5V" gate="G$1" x="104.14" y="-5.08" smashed="yes" rot="R180">
-<attribute name="TP_SIGNAL_NAME" x="102.87" y="-3.81" size="1.778" layer="97" rot="R180"/>
+<instance part="5V" gate="G$1" x="60.96" y="88.9" smashed="yes" rot="R270">
+<attribute name="TP_SIGNAL_NAME" x="59.69" y="87.63" size="1.778" layer="97" rot="R270"/>
 </instance>
 <instance part="GND" gate="G$1" x="106.68" y="-5.08" smashed="yes" rot="R180">
 <attribute name="TP_SIGNAL_NAME" x="105.41" y="-3.81" size="1.778" layer="97" rot="R180"/>
@@ -6292,6 +6362,13 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </instance>
 <instance part="JP1" gate="G$1" x="124.46" y="114.3" smashed="yes" rot="R90">
 <attribute name="VALUE" x="129.54" y="107.95" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="IC1" gate="G$1" x="25.4" y="88.9" smashed="yes">
+<attribute name="NAME" x="46.99" y="96.52" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="46.99" y="93.98" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="GND1" gate="1" x="53.34" y="86.36" smashed="yes" rot="R90">
+<attribute name="VALUE" x="55.88" y="83.82" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -6330,13 +6407,27 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="GND" gate="G$1" pin="TP"/>
 <pinref part="IC2" gate="G$1" pin="GND_1"/>
-<pinref part="IC2" gate="G$1" pin="GND_1"/>
 <junction x="106.68" y="-2.54"/>
 <junction x="106.68" y="-2.54"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="A" pin="4"/>
 <pinref part="GND9" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="GND1" gate="1" pin="GND"/>
+<pinref part="IC1" gate="G$1" pin="GND"/>
+<wire x1="50.8" y1="86.36" x2="55.88" y2="86.36" width="0.1524" layer="91"/>
+<junction x="50.8" y="86.36"/>
+<pinref part="IC1" gate="G$1" pin="PG"/>
+<wire x1="25.4" y1="83.82" x2="25.4" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="81.28" x2="50.8" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="81.28" x2="25.4" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="81.28" x2="55.88" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="EP"/>
+<wire x1="38.1" y1="71.12" x2="50.8" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="71.12" x2="50.8" y2="81.28" width="0.1524" layer="91"/>
+<junction x="50.8" y="81.28"/>
 </segment>
 </net>
 <net name="CAPS" class="0">
@@ -6376,15 +6467,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="SCLK" gate="G$1" pin="TP"/>
 <pinref part="IC2" gate="G$1" pin="(PCINT1/SCLK)_PB1"/>
-</segment>
-</net>
-<net name="VIN" class="0">
-<segment>
-<wire x1="43.18" y1="66.04" x2="43.18" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="33.02" x2="10.16" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="USB-C" gate="G$1" pin="VBUS"/>
-<wire x1="43.18" y1="66.04" x2="71.12" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="UVCC"/>
 </segment>
 </net>
 <net name="CC" class="0">
@@ -6441,12 +6523,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="RST" gate="G$1" pin="TP"/>
 </segment>
 </net>
-<net name="VCC" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="VCC_1"/>
-<pinref part="5V" gate="G$1" pin="TP"/>
-</segment>
-</net>
 <net name="SCROLL" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="PF7_(ADC7/TDI)"/>
@@ -6466,6 +6542,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="JP2" gate="A" pin="1"/>
 <wire x1="167.64" y1="55.88" x2="187.96" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="55.88" x2="187.96" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="VCC_1"/>
 </segment>
 </net>
 <net name="DATA" class="0">
@@ -6492,6 +6569,32 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="JP2" gate="A" pin="5"/>
 <wire x1="190.5" y1="63.5" x2="187.96" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VIN" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="EN"/>
+<wire x1="50.8" y1="83.82" x2="58.42" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="IN"/>
+<wire x1="58.42" y1="83.82" x2="58.42" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="88.9" x2="50.8" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="33.02" x2="10.16" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="USB-C" gate="G$1" pin="VBUS"/>
+<wire x1="35.56" y1="33.02" x2="35.56" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="68.58" x2="58.42" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="83.82" x2="58.42" y2="68.58" width="0.1524" layer="91"/>
+<junction x="58.42" y="83.82"/>
+<pinref part="5V" gate="G$1" pin="TP"/>
+<junction x="58.42" y="88.9"/>
+</segment>
+</net>
+<net name="5V" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="OUT"/>
+<wire x1="25.4" y1="88.9" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="88.9" x2="22.86" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="UVCC"/>
+<wire x1="22.86" y1="66.04" x2="71.12" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

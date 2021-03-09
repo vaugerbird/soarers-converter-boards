@@ -6283,7 +6283,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="USB-C" library="USB4085-GF-A_REVA" deviceset="USB4085-GF-A_REVA" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="RST" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP17R" package3d_urn="urn:adsk.eagle:package:27971/1"/>
-<part name="5V" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP17R" package3d_urn="urn:adsk.eagle:package:27971/1"/>
 <part name="GND" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP17R" package3d_urn="urn:adsk.eagle:package:27971/1"/>
 <part name="JP2" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X3" device="" package3d_urn="urn:adsk.eagle:package:22462/2"/>
 <part name="JP3" library="adafruit" deviceset="PINHD-1X3" device=""/>
@@ -6291,6 +6290,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X1" device="" package3d_urn="urn:adsk.eagle:package:22485/2"/>
 <part name="IC1" library="SamacSys_Parts" deviceset="TPS7A2650DRVR" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="5V" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="TP17R" package3d_urn="urn:adsk.eagle:package:27971/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -6343,9 +6343,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="RST" gate="G$1" x="101.6" y="-5.08" smashed="yes" rot="R180">
 <attribute name="TP_SIGNAL_NAME" x="100.33" y="-3.81" size="1.778" layer="97" rot="R180"/>
 </instance>
-<instance part="5V" gate="G$1" x="60.96" y="88.9" smashed="yes" rot="R270">
-<attribute name="TP_SIGNAL_NAME" x="59.69" y="87.63" size="1.778" layer="97" rot="R270"/>
-</instance>
 <instance part="GND" gate="G$1" x="106.68" y="-5.08" smashed="yes" rot="R180">
 <attribute name="TP_SIGNAL_NAME" x="105.41" y="-3.81" size="1.778" layer="97" rot="R180"/>
 </instance>
@@ -6369,6 +6366,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </instance>
 <instance part="GND1" gate="1" x="53.34" y="86.36" smashed="yes" rot="R90">
 <attribute name="VALUE" x="55.88" y="83.82" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="5V" gate="G$1" x="60.96" y="88.9" smashed="yes" rot="R270">
+<attribute name="TP_SIGNAL_NAME" x="59.69" y="87.63" size="1.778" layer="97" rot="R270"/>
 </instance>
 </instances>
 <busses>
